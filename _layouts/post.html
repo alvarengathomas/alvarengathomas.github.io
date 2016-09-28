@@ -61,29 +61,6 @@ layout: default
         <i class="fa fa-{{ social.icon | remove_first: '-square' }}-square fa-lg"></i>
       </a>
     {% endif %}
-    {% if social.name == "Google+" and social.share == true %}
-      <a href="//plus.google.com/share?title={{ page.title | cgi_escape }}&url={{ full_url }}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <i class="fa fa-{{ social.icon | remove_first: '-square' }}-square fa-lg"></i>
-      </a>
-    {% endif %}
-    {% if social.name == "LinkedIn" and social.share == true %}
-      <a href="//www.linkedin.com/shareArticle?mini=true&url={{ full_url }}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <i class="fa fa-{{ social.icon | remove_first: '-square' }}-square fa-lg"></i>
-      </a>
-    {% endif %}
-    {% if social.name == "Pinterest" and social.share == true %}
-      <a href="//www.pinterest.com/pin/create/button/?description={{ page.title | cgi_escape }}&url={{ full_url }}&media={{ site.url }}{% if page.cover %}{{ page.cover | prepend: site.baseurl  }}{% elsif site.cover %}{{ site.cover | prepend: site.baseurl }}{% else %}{{ site.logo | prepend: site.baseurl }}{% endif %}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <i class="fa fa-{{ social.icon | remove_first: '-square' }}-square fa-lg"></i>
-      </a>
-    {% endif %}
-    {% if social.name == "Reddit" and social.share == true %}
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('{{ full_url }}') + '&title={{page.title}}'; return false">
-        <i class="fa fa-{{ social.icon | remove_first: '-square' }}-square fa-lg"></i>
-      </a>
-    {% endif %}
   {% endfor %}
 </section>
 {% if site.inter_post_navigation == true %}
