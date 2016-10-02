@@ -2,15 +2,13 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">{{ site.title }}</h3>
-
     <div class="site-navigation">
       
       <p><strong>Site Map</strong></p>
       <ul class="pages">
         {% for page in site.pages %}
         {% if page.title and page.main_nav != false %}
-          <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
       </ul>
@@ -18,7 +16,7 @@
 
     <div class="site-contact">
 
-      <p><strong>Contact</strong></p>
+      <p><strong>Contatos</strong></p>
       <ul class="social-media-list">
         <li>
           <a href="mailto:{{ site.email }}">
@@ -41,8 +39,22 @@
       </ul>
     </div>
 
-    <div class="site-signature">
-      <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
+    <div class="site-contact">
+      <p class="rss-subscribe text"><strong>Inscreva-se</strong></p>
+			<ul class="social-media-list">
+        <li>
+					<a href="#">
+						<i class="fa fa-envelope-o"></i>
+						<span class="username">Lista de Emails</span>
+					</a>
+        </li>
+				<li>
+					<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+						<i class="fa fa-rss"></i>
+						<span class="username">Feed RSS</span>
+					</a>
+        </li>
+      </ul>
     </div>
 
   </div>

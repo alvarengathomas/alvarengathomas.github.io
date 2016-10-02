@@ -14,11 +14,11 @@ subtitle: "Um blog de um programador apaixonado por boas práticas e metodologia
 email: alvarenga.thomas@gmail.com
 name: Thomas Alvarenga
 description: >
-  Nós acreditamos que o desenvolvimento de software não precisa ser difícil e estressante, o que causa isso é a falta de conhecimento dos programadores a respeito das técnicas e boas práticas necessárias para se construir um sistema de qualidade em pouco tempo e que realmente facilite a vida de seus clientes e automatize processos em empresas.
+  Um blog sobre boas práticas de desenvolvimento de software e metodologias ágeis
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://alvarengathomas.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
-logo: "/assets/logo.png"
+logo: "/assets/logo.svg"
 
 # Build settings
 markdown: kramdown
