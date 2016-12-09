@@ -20,7 +20,7 @@
   {% if site.protocols.fb_image %}
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="{{ description }}" />
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:url" content="{{ page.url }}" />
   <meta property="og:site_name" content="{{ page.title }}" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:type" content="website" />
@@ -36,7 +36,7 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-  <meta name="twitter:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="twitter:url" content="{{ page.url }}">
   {% endif %}
 
   {% if protocols.os_repo and protocols.os_rcs_type and protocols.os_src %}
@@ -51,4 +51,7 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+	<script type="text/javascript" id="st_insights_js" src="https://ws.sharethis.com/button/buttons.js?publisher=bb03c15c-47c2-4cef-98af-bfa3cee22ae5"></script>
+	<script type="text/javascript">stLight.options({publisher: "bb03c15c-47c2-4cef-98af-bfa3cee22ae5", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>

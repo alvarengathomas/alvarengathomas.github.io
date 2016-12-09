@@ -14,7 +14,7 @@ name: Thomas Alvarenga
 description: >
   Um blog sobre boas práticas de desenvolvimento de software e metodologias ágeis
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://alvarengathomas.github.io" # the base hostname & protocol for your site
+url: "https://alvarengathomas.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.svg"
 
