@@ -80,14 +80,17 @@ pre code.hljs {
 		.title {
 			font-size: modular-scale(6);
 		}
-		.subtitle, .info {
+		.subtitle {
+			font-size: modular-scale(5);
+		}
+		.info {
 			font-size: modular-scale(1);
 		}
 	}
 	.scrim {
 		padding: 3em 1em;
 		&.has-cover {
-			background-color: rgba(0,0,0,0.2);
+			background-color: rgba(0,0,0,0.6);
 			padding: 6em 1em !important;
 			@include media($tablet) {
 				padding: 9em 1em !important;
@@ -204,6 +207,10 @@ pre code.hljs {
 	.post-list {
 		padding-top: 1em !important;
 		@extend %default-ul;
+
+		.post-link {
+			line-height: 12px;
+		}
 	}
 	.post-meta {
 		@include outer-container;
@@ -249,7 +256,6 @@ pre code.hljs {
 	img {
 		display: block;
 		margin: auto;
-		width: 90%;
 	}
 	/*
 	*	Posts
@@ -297,6 +303,14 @@ pre code.hljs {
 		}
 		.disqus {
 			@include span-columns(12);
+		}
+		.email {
+			height: 45px!important;
+			padding: 15px!important;
+		}
+		.button {
+			background-color: #54afdd!important;
+			height: 45px!important;
 		}
 		.post-navigation {
 			font-size: 0.9em;
