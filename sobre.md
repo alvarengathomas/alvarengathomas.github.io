@@ -6,9 +6,7 @@ permalink: /sobre/
 
 <img src="{{ site.baseurl }}/assets/profile.jpg" title="Profile Picture" class="profile">
 
-Fala dev!
-
-Sou o Thomás Alvarenga e esse é meu blog, mas se você está procurando pelas novidades do momento, como utilizar aquele novo framework que foi lançado ou aprender a linguagem da moda   aqui não é o seu lugar, o objetivo desse blog é te ensinar boas práticas no desenvolvimento de software que resolvem certa de 80% dos problemas do seu dia a dia como programador, não é nenhuma novidade, apenas aplicação de metodologias de desenvolvimento que funcionam, mas que são pouco praticadas por desenvolvedores.
+Sou o Thomás Alvarenga e esse é meu blog, se você está procurando pelas novidades do momento, como utilizar aquele novo framework que foi lançado ou aprender a linguagem da moda aqui não é o seu lugar, o objetivo desse blog é te ensinar boas práticas no desenvolvimento de software que resolvem certa de 80% dos problemas do seu dia a dia como programador, não é nenhuma novidade, apenas aplicação de metodologias de desenvolvimento que funcionam, mas que são pouco praticadas por desenvolvedores.
 
 Não defendo nenhuma linguagem com unhas e dentes, acredito que programador bom é programador organizado e linguagem é apenas uma ferramenta que pode ser trocada de tempos em tempos.
 
