@@ -129,6 +129,7 @@ pre code.hljs {
   .logo {
     float: left;
     height: 4em;
+		margin-top: 10px;
     @include media ($tablet) {
     	padding-left: $em-base;
     }
@@ -294,6 +295,11 @@ pre code.hljs {
 				@include span-columns(6);
 				margin: 1em 0;
 				text-align: right;
+			}
+			.fb-like {
+				span {
+					height: 36px!important;
+				}
 			}
 			a {
 				width: 1em;
