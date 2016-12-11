@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include site/head/main.html %}
 
   <body>
 
-    {% include header.html %}
-
+    {% include site/header.html %}
+		{% include social/facebook-script.html %}
+		{% include social/twitter-script.html %}
+		{% include social/disqus-script.html %}
+		
     <div class="page-content">
         {{ content }}
     </div>
 
-    {% include footer.html %}
+    {% include site/footer.html %}
 
   </body>
 

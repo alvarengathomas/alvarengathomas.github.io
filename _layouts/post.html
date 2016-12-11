@@ -15,37 +15,21 @@ layout: default
 
 	<div class="wrapper">
 
-		{% unless page.cover %} {% include page_divider.html %} {% endunless %}
-
 		<section class="post-meta">
-			<div class="post-date">{% include post-date.html %}</div>
-			<div class="post-categories">{% include minutes-to-read.html %}</div>
+			<div class="post-date">{% include post/date.html %}</div>
+			<div class="post-categories">{% include post/minutes-to-read.html %}</div>
 		</section>  
 		
 		<article class="post-content">
 			{{ content }}
 		</article>
-		<div style="float: right">
-			<span class='st_facebook_large' displayText='Facebook'></span>
-			<span class='st_twitter_large' displayText='Tweet'></span>
-			<span class='st_linkedin_large' displayText='LinkedIn'></span>
+
+		<div class="share">
+			{% include social/facebook-button.html %}
+			{% include social/twitter-button.html %}
 		</div>
 		
-		<div id="disqus_thread"></div>
-		<script>
-			var disqus_config = function () {
-			this.page.url = '{{ page.url | prepend: site.url }}';
-			this.page.identifier = '{{ page.url | prepend: site.url }}';
-			};
-
-			(function() {
-			var d = document, s = d.createElement('script');
-			s.src = '//thomasalvarenga.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-																	
+		{% include social/disqus-comments.html %}
+											
 	</div>
 </div>
