@@ -24,7 +24,7 @@ permalink: /:title
 paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: false
-highlightjs_theme: "monokai_sublime"
+highlightjs_theme: "agate"
 
 # Google analytics
 ga_tracking_id: "UA-84953583-1"
