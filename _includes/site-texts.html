@@ -1,5 +1,0 @@
-{% if page.excerpt %}
-	{% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
-{% else %}
-	{% assign description = site.description %}
-{% endif %}
