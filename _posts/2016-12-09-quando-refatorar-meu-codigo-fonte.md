@@ -16,18 +16,17 @@ Era uma vez, um simples programador que estava trabalhando tranquilo no seu comp
 quando de repente, assustado com o que vê na tela, para tudo o que esta fazendo e pronuncia mentalmente 
 a ilustre sentença: - Que merda que tá esse código!
 
-![programador assustado com o código](http://www.reactiongifs.com/r/tmhnks.gif)
+![programador assustado com o código](/assets/programador-assustado.gif)
 
-Eu tenho certeza que em alguns momentos da sua jornada como desenvolvedor essa fábula se tornou realidade,
-você se vê num beco sem saída, você sabe que aquele código está ruim, sabe que precisa ser refatorado, mas ao mesmo
-tempo, você não tem ideia do que fazer exatamente para melhorar e até tem medo de mexer em um lugar e afetar outras partes do software.
+Eu tenho certeza que em alguns momentos da sua jornada como desenvolvedor essa história se tornou realidade,
+você se vê num beco sem saída, sabe que aquele código está ruim, sabe que precisa refatorar, mas ao mesmo
+tempo não tem ideia do que fazer exatamente para melhorar e até tem medo de mexer em um lugar e afetar outras partes do software.
 
 Esse é o famoso **código espaguete**!
 
 Nesse momento nós constumamos pensar o seguinte: "Se está funcionando, deixa quieto!", mas esse pensamento é uma auto sabotagem,
 quando pensamos dessa maneira estamos vendo apenas o lado do cliente que vai utilizar o software, não paramos pra pensar em
-quem vai ter que dar manutenção nesse código terrível, você vai estar criando um problema pra você mesmo no futuro e também
-para seus colegas de trabalho.
+quem dará manutenção nesse código terrível, agindo assim você vai criar um problema pra si mesmo no futuro e também para seus colegas de trabalho.
 
 Sem contar que códigos espaguetes tendem a gerar softwares bugados com o passar do tempo!
 
@@ -74,6 +73,7 @@ e ainda atualizar a quantidade do produto em estoque, ou seja, essa classe tem t
 alterada.
 
 Agora vamos imaginar que temos que implementar as seguintes funcionalidades:
+
 * Incluir o campo "validade" na tabela de produtos;
 * Modificar a maneira como o estoque é contabilizado;
 * Adicionar a opção de cupom de desconto no carrinho de compras;
@@ -121,7 +121,7 @@ Um outro motivo muito importante para não termos arquivos com mais de cem linha
 cérebro tem dificuldade em assimilar grandes porções de lógica, você já deve ter percebido isso quando passa
 um tempo longe de um código e depois volta a trabalhar com ele, o cérebro demora um pouco pra "pegar no tranco".
 
-![cerebro tentando entender a lógica](http://www.venamimundo.com/Demencias/Alzheimer/Ninos/Fotos/Cerebro-animado-03.gif)
+![cerebro tentando entender a lógica](/assets/cerebro-lendo.gif)
 
 Sendo assim, o melhor a se fazer é criar arquivos, classes e métodos o menor possível para ajudar seu cérebro
 a compreender aquela lógica mais facilmente.  
@@ -151,7 +151,7 @@ Então vamos dar nome aos bois:
 
 ```javascript
 for (int index = 0; index < productList.length; index++) {
-  storeTotal += productList[index].count;
+  stockTotal += productList[index].count;
 }
 ```
 Com esses nomes o código fala por si só, não é necessário comentário nem documentação pra mostrar o que
@@ -241,8 +241,12 @@ class ShoppingCart {
   sumEletronicSales(cart) {
     var quantity = 0;
     
+    if (!this.itsPaid(cart)) {
+      return 0;
+    }
+
     foreach (product in cart.products) {
-      if (product.category.isEletronic() && this.itsPaid(cart)) {
+      if (product.category.isEletronic()) {
          quantity += product.quantity;
       }
     }
@@ -266,11 +270,11 @@ Parece que estamos escrevendo mais linhas para fazer a mesma coisa, mais um cód
 
 ### Agora é a sua vez!
 
-Se você chegou até aqui é porque realmente quer aprender a refatorar seu código-fonte e mudar a maneira como escreve software, de acordo
+Se você chegou até aqui é porque realmente quer aprender a refatorar seu código-fonte e mudar a maneira como escreve software, entretanto, de acordo
 com essa [pesquisa](http://blog.mundopm.com.br/2013/03/15/o-ser-humano-e-a-absorcao-de-conhecimentos/){:target="_blank"}, nós armazenamos 
 apenas 10% do conteúdo que lemos, mas se você praticar o que leu esse valor sobe para 75%.
 
-Pensando nisso eu preparei um PDF com exercícios que você pode fazer o download inserindo seu email no campo abaixo:
+Pensando nisso, eu preparei uma série de exercícios que você pode ter acesso inserindo seu email no campo abaixo:
 
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -286,10 +290,11 @@ Pensando nisso eu preparei um PDF com exercícios que você pode fazer o downloa
 </form>
 </div>
 <br/>
-Nesse PDF eu também coloquei o link de um repositório no GitHub que está bem bagunçado, só te esperando para ser refatorado. Faz um
-fork lá e aplica o que aprendeu nesse post na prática, depois só mandar um PR que agente faz uma avaliação.
+No final da série de exercícios eu coloquei um link para um repositório no Github que está bem bagunçado,
+só te esperando para ser refatorado. Faz um fork lá e aplica o que aprendeu nesse post na prática, 
+depois só mandar um PR que agente faz uma avaliação.
 
-Ahh não esquece de deixar seu comentário aqui embaixo e compartilhar com os desenvolvedores que você conhece, eles devem estar precisando
-desse conteúdo também!
+Ahh não esquece de deixar seu comentário aqui embaixo e compartilhar com os desenvolvedores que você conhece,
+eles devem estar precisando desse conteúdo também!
 
 Então é isso, um abraço e até o próximo post!
