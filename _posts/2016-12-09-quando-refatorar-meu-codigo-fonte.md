@@ -7,7 +7,7 @@ date:   2016-12-09 00:00:00
 author: Thomas Alvarenga
 categories: Refactoring
 tags:	refactoring
-cover:  "/assets/instacode.png"
+cover:  "/assets/instacode.jpg"
 ---
 
 >_"A arte de programar consiste na arte de organizar e dominar a complexidade."_ - Dijkstra
